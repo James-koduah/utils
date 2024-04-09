@@ -4,7 +4,9 @@ Welcome to the Useful Functions Repository! This repository contains a collectio
 
 ## Getting Started
 
-To get started, simply clone this repository to your local machine:
+To get started, simply navigate to the desired file and **Ctrl+C - Ctrl+V** the function into your project.
+
+You can also clone this repository to your local machine:
 
 ```bash
 git clone https://github.com/James-koduah/utils.git
