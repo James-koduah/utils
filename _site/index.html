@@ -1,6 +1,3 @@
----
----
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,12 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrelacs</title>
-    {% include head.html %}
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrelacs</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    rel="stylesheet" />
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/styles/nav.css">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/footer.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    {% include navBar.html %}
+    <nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="">
+      Entrelacs
+    </a>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="navLinks">
+      <li><a href="/otherHero">Other Hero Pages (Kristine)</a></li>
+      <li><a href="/what-is-entrelacs">What is Entrelacs</a></li>
+      <li><a href="/about">About Us</a></li>
+      <li class="cta"><a href="/contact">Contact Us</a></li>
+    </ul>
+
+    <div class="mobileMenu" id="mobileMenu" style="display: none;">
+      <ul>
+        <li><a href="/otherHero">Other Hero Pages (Kristine)</a></li>
+        <li><a href="/about">What is Entrelacs</a></li>
+        <li><a href="/features">About Us</a></li>
+        <li class="cta"><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  let menuOpen = false;
+
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+
+    // Toggle mobile menu display
+    mobileMenu.style.display = menuOpen ? 'block' : 'none';
+
+    // Animate hamburger spans
+    const spans = hamburger.querySelectorAll('span');
+    spans[0].style.transform = menuOpen ? 'rotate(45deg) translate(5px, 6px)' : 'none';
+    spans[1].style.opacity = menuOpen ? 0 : 1;
+    spans[2].style.transform = menuOpen ? 'rotate(-45deg) translate(5px, -7px)' : 'none';
+  });
+
+  // Optional: close menu when mobile links are clicked
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuOpen = false;
+      mobileMenu.style.display = 'none';
+      const spans = hamburger.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = 1;
+      spans[2].style.transform = 'none';
+    });
+  });
+</script>
     <div class="page">
 
         <section class="hero">
@@ -175,7 +244,66 @@
 
     </div>
 
-    {% include footer.html %}
+    <footer class="footer">
+
+  <!-- Top Section: Logo & Nav Links -->
+  <div class="topSection">
+
+    <!-- Left Side: Logo and Company Name -->
+    <div class="companyInfoContainer">
+      <div class="logoContainer">
+        <img src="/images/logo.png" alt="Entrelacs Logo" width="120" height="120">
+      </div>
+      <h3 class="companyName">Entrelacs</h3>
+    </div>
+
+    <!-- Right Side: Three Columns of Links -->
+    <div class="linksContainer">
+
+      <div class="linkColumn">
+        <h4>What is Entrelacs?</h4>
+        <ul>
+          <li><a href="/about">Technology</a></li>
+          <li><a href="/careers">Reserch</a></li>
+        </ul>
+      </div>
+
+      <div class="linkColumn">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="/integrations">Leadership Team</a></li>
+          <li><a href="/case-studies">Panel of Advisers</a></li>
+        </ul>
+      </div>
+
+      <div class="linkColumn">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="/help-center">absl.io</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Section: Legal & Copyright -->
+  <div class="bottomSection">
+    <p id="copyright"></p>
+    <div class="legalLinks">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms-of-service">Terms of Use</a>
+      <a href="/legal-mentions">Legal Mentions</a>
+    </div>
+  </div>
+
+</footer>
+
+<script>
+  const currentYear = new Date().getFullYear();
+  document.getElementById('copyright').textContent =
+    `© ${currentYear} Entrelacs. All Rights Reserved.`;
+</script>
+
 
 
 </body>
