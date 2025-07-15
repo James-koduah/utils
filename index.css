@@ -191,6 +191,9 @@
         text-align: center;
     }
 
+    .content p{
+	    text-align: center;
+    }
     .contentRight {
         width: 100%;
         justify-content: center;
