@@ -307,6 +307,15 @@
         width: 100%;
         padding-left: 0px;
     }
+    .sr1img{
+        margin-right: 0;
+        width: 50px;
+        height: 40px;
+    }
+    .sr1img svg{
+        width: 40px;
+        height: 40px;
+    }
 }
 
 
