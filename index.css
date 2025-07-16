@@ -171,6 +171,8 @@
 
     .content {
         flex-direction: column;
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .contentLeft {
@@ -178,22 +180,22 @@
         margin-bottom: 90px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
     }
 
     .contentLeft h1 {
-        text-align: center;
+        text-align: left;
         margin-bottom: 15px;
     }
 
     .content h2 {
         margin-bottom: 80px;
-        text-align: center;
+        text-align: left;
+    }
+    .content p{
+        text-align: left;
     }
 
-    .content p{
-	    text-align: center;
-    }
     .contentRight {
         width: 100%;
         justify-content: center;
@@ -205,12 +207,23 @@
     }
 
     .contentCta {
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
 
     .contentCta button {
-        width: 200px;
+        width: 100%;
+    }
+
+    .iphone{
+        width: 70vw;
+        height: auto;
+        max-width: 250px;
+        aspect-ratio: 9/18;
+    }
+    .iphone img{
+        object-position: bottom;
     }
 }
 
