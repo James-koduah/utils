@@ -204,6 +204,7 @@
 
     .content p {
         text-align: left;
+        font-size: 1.8em;
     }
 
     .contentRight {
@@ -217,7 +218,7 @@
     }
 
     .contentCta button {
-        width: 200px
+        width: 150px
     }
 }
 @media (max-width: 650px) {
