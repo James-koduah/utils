@@ -9,16 +9,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 3rem 0 1.5rem;
+    padding-top: 80px;
+    padding-bottom: 40px;
     /* Generous top padding */
 }
 
 .topSection {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    padding: 0 2rem;
     margin-bottom: 50px;
 }
 
@@ -58,10 +57,10 @@
 
 .linkColumn h4 {
     /* text-transform: uppercase; */
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-weight: 600;
     letter-spacing: 0.05em;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     color: #fff;
 }
 
@@ -157,7 +156,7 @@
         width: 100%;
     }
     .linkColumn h4{
-        font-weight: 400;
+        font-weight: 600;
         margin-bottom: 5px;
     }
 }

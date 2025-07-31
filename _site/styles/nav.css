@@ -13,11 +13,11 @@
 
 .nav_container {
   height: 60px;
-  margin: 0 auto;
-  padding: 0 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -129,7 +129,7 @@
 
 @media (max-width: 900px) {
   .nav_container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
   .navLinks {
     display: none;
